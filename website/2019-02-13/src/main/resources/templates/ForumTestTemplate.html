@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+   <link rel="stylesheet" type="text/css" href="../static/css/style.css" th:href="@{/css/style.css}"/>
+  <title>Тестовый шаблон</title>
+</head>
+
+<body>
+<h1>Форум</h1>
+
+
+<!-- start post template-->
+<div class="postPody">
+<div class="posterInfo">
+<p>имя постера</p>
+</div>
+<div class="main">
+     <div class="postContent">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae facere molestiae quam tempora vel. Blanditiis doloremque dolores, eum fugit hic inventore necessitatibus nisi, officia quaerat tempora tempore totam. Harum, nisi suscipit. Est, harum.</div>
+
+
+
+<p data-th-text="${atr2}"></p>
+<p data-th-text="${atr3}"></p>
+</div>
+</div>
+<!-- end post template-->
+
+<!-- start post template-->
+<div class="postPody">
+<div class="posterInfo">раздел навигации</div>
+<div class="main">
+     <div class="postContent">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae facere molestiae quam tempora vel. Blanditiis doloremque dolores, eum fugit hic inventore necessitatibus nisi, officia quaerat tempora tempore totam. Harum, nisi suscipit. Est, harum.</div>
+
+
+
+<p data-th-text="${atr2}"></p>
+<p data-th-text="${atr3}"></p>
+</div>
+</div>
+<!-- end post template-->
+
+
+<!-- start Add new post form template -->
+<form  class="addpost" action="#" data-th-action="@{/addPost}" data-th-object="${newPost}" method="post">
+
+ <label for="id">post:</label><br>
+  <input type="text" id='postid' data-th-field="${newPost.id}" placeholder="Post ID"/><br>
+
+<label for="author">author:</label><br>
+<input type="text" id="author" data-th-field="${newPost.author}" placeholder="Post author"/><br>
+
+<label for="content">content:</label><br>
+<textarea  class="inputContent" spellcheck="true" accesskey="C" name="text" id="content" cols="30"   rows="10"></textarea>
+<!-- <input class="inputContent" id = "content" type="textarea"    data-th-field="${newPost.content}" placeholder="Post content"/><br>-->
+<input class="submitForm" type="submit" value="Submit" />
+
+</form>
+<!-- end Add new post form template-->
+</body>
+</html>

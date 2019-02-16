@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+   <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+  <title>forumMain</title>
+</head>
+<body>
+<h1>Форум</h1>
+
+<!-- start post template-->
+<div class="postPody" data-th-each="post : ${posts}">
+<div class="posterInfo">
+  <p class="post_author" data-th-text="${post.author}"></p>
+</div>
+<div class="main">
+     <div class="post_id" data-th-text="${post.id}"></div>
+     <div class="postContent" data-th-text="${post.content}"></div>
+<p data-th-text="${atr2}"></p>
+<p data-th-text="${atr3}"></p>
+</div>
+</div>
+<!-- end post template-->
+
+<!-- start Add new post form template -->
+<form action="#" data-th-action="@{/addPost}" data-th-object="${newPost}" method="post">
+<input type="text" data-th-field="${newPost.id}" placeholder="Post ID"/>
+<input type="text" data-th-field="${newPost.author}" placeholder="Post author"/>
+<input type="text" data-th-field="${newPost.content}" placeholder="Post content"/>
+<input type="submit" value="Submit" />
+</form>
+<!-- end Add new post form template-->
+
+
+</body>
+</html>
+

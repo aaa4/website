@@ -1,0 +1,58 @@
+h1 {
+    color: #0086ce;
+    margin: 30px;
+}
+
+body {
+
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+.inputContent{
+    display: block;
+    margin: 5px;
+
+    height: 200px;
+    text-align: left;
+
+}
+input, textarea{
+    margin: 5px;
+    width: 90%;
+    min-width: 100px;
+    max-width: 2000px;
+}
+label{
+    margin-left: 5px;
+}
+.submitForm{
+    width: 20px;
+}
+
+.postPody{
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid #b81a07;
+    border-radius: 20px;
+    overflow: hidden;  /*чтобы работал радиус*/
+}
+.posterInfo {
+    border-right: 1px #b81a07 solid;
+    flex: 10%;
+    background-color: #fffcfc;
+    padding: 20px;
+}
+
+.main {
+    flex: 80%;
+    background-color: #f9f1f9;
+    padding: 20px;
+}
+
+.addpost{
+    margin: 20px;
+    border: 1px solid #b81a07;
+    border-radius: 20px;
+    padding: 15px;
+}
